@@ -1,0 +1,36 @@
+/* HTML Object Style */
+ul,
+p strong {
+  background-color: darkblue;
+  color: bisque;
+  font-size: x-large;
+}
+/* class Style */
+.important_list {
+  background-color: red;
+  font-weight: bold;
+  font-family: cursive;
+}
+/* ul:first-child*/
+ul > li {
+  background-color: chocolate;
+  color: whitesmoke;
+}
+.important_list li {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: gray;
+  padding: 10px;
+  border-style: dashed;
+  border-width: 2px;
+  margin: 15px;
+}
+/* ID Style */
+#list_of_greetings {
+  background-color: green;
+  color: whitesmoke;
+  font-family: "Times New Roman", Times, serif;
+}
+/* Priority: Elements --> class --> IDs */
+input[type=number] {
+    background-color: greenyellow;
+}
