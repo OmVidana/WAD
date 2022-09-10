@@ -1,0 +1,37 @@
+div {
+    height: 200px;
+    width: 200px;
+    /* display: inline-block; */
+    /* text-align: center; */
+    /* font-size: 32px; */
+}
+
+.top-container {
+    background-color: red;
+    position: absolute;
+    top: 400px;
+    left: 400px; 
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+}
+
+.middle-container {
+    background-color: blue;
+    /*position: absolute; Absolute its based on the webpage screen*/
+    /* position: sticky; It moves with the camera*/
+    /* position: fixed; A position within the screen*/
+    /* position: relative; shift to the original point the object was supose to be*/
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    /* margin-left: 260px; */
+}
+
+.bottom-container {
+    background-color: yellow;
+    /* margin-left: 500px; */
+    /* display: none; not space allocated*/
+    /* visibility: hidden; space allocated*/
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
