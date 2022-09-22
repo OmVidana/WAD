@@ -1,0 +1,28 @@
+#carouselExampleCaptions {
+    width:  1080px;
+    height: 600px;
+}
+
+#carouselExampleCaptions img {
+    width: 1080px;
+}
+
+.spacer {
+    height: 200px;
+    background-color: red;
+}
+
+.row div {
+    background-color: rgb(49, 40, 177);
+    border: 5px solid rgb(5, 45, 54);
+}
+
+@media (min-width: 1500px) {
+    .spacer {
+        background-color: green;
+
+    }
+    #carouselExampleCaptions {
+        display: none;
+    }
+}
