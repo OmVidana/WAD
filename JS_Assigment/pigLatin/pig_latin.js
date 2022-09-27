@@ -2,9 +2,11 @@
 Pig Latin
 */
 
-function igpayAtinlay(str) {
+function igpayAtinlay() {
+    "use strict";
     var returnArray = [],
-        wordArray = str.split(' ');
+    str = document.getElementById('pigL').value,
+    wordArray = str.split(' ');
 
     for (var i = 0; i < wordArray.length; i++) {
         var word = wordArray[i];
@@ -25,9 +27,11 @@ function igpayAtinlay(str) {
 
         returnArray.push(word.substr(beginning.length) + beginning + 'ay');
     }
-    return returnArray.join(' ');
+    var res = returnArray.join(' ');
+    console.log(res)
+    document.getElementById("pigDisplay").innerHTML = res;
+    return res;
 }
-
-console.log(igpayAtinlay("pizza")); // "izzapay"
-console.log(igpayAtinlay("apple")); // "appleway"
-console.log(igpayAtinlay("happy meal")); // "appyhay ealmay"
+// console.log(igpayAtinlay("pizza")); // "izzapay"
+// console.log(igpayAtinlay("apple")); // "appleway"
+// console.log(igpayAtinlay("happy meal")); // "appyhay ealmay"
