@@ -6,24 +6,27 @@
 var memo = {};
 function fibonacci() {
     "use strict";
-    var n = document.getElementById("numFibo").value;
+    var n = parseInt(document.getElementById("numFibo").value);
     var val = f(n);
-    document.getElementById("fibonacciLbl").textContent = val;
+    document.getElementById("fibonacciLbl").innerHTML = val;
 }
 
 function f(n) {
-
     var value;
     if (memo.hasOwnProperty(n)) {
         value = memo[n];
-    } else {
-        memo = [0, 1];
-        for (let i = 2; i <= n; i++) {
-            memo[i] = memo[i - 2] + memo[i - 1];
-          }
-        value = memo[n];
+    } 
+    else {
+
+        if (n <= 1) {
+            value = n;
+        }
+        else {
+            value = f(n-1) + f(n-2);
+        }
+        memo[n] = value;
     }
 
     return value;
 }
-console.log(f(15));
+// console.log(f(15));
