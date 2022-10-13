@@ -7,8 +7,10 @@
     <title>Landing Page</title>
 </head>
 <body>
+    <img src="../images/logo.jpeg" alt="ErrNaN">
     <h1>Welcome to my landing page!</h1>
-    <form action="/students" method="post">
+<!-- I should use post but in this case im using get instead of post to try ejs -->
+    <form action="/students" method="get">
         <label for="name">Name</label>
         <input type="text" name="name" id="name"/>
         <input type="submit"/>
