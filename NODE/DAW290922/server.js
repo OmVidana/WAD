@@ -6,10 +6,22 @@ app.use(express.static("public"));
 app.engine('html', require('ejs').renderFile);
 app.set('view engine','html');
 
-app.get("/",(req, res) => {
-    let name = req.query.name;
-    // res.sendFile(__dirname + "/public/html/index.html");
-    res.render('home.ejs', {name: name});
+const welcomeMsg = "Welcome to my blog"
+const longC= "udgfa dgjad  jskdgjad  dgjad dgjad  dg jskdgjad  dgjad  dgj jskdgjad  dgjad  dgjadgjag dyjad  jskadgjag dyjad  jskjad  dgjadgjag dyjad  dgjadgjag dyjaw"
+let posts=[]
+
+app.get("/",(req,res) =>{
+    //res.sendFile(__dirname + "/public/html/index.html")
+    posts.push({
+        title: "My entry blog",
+        content: longC
+    })
+    res.render("home.ejs", { startingContent: welcomeMsg, posts: posts});
+});
+
+app.get("/posts/:blogTitle", (req, res) =>{
+
+    res.render("post.ejs",{post:posts[0] });
 });
 
 app.get("/students", (req, res) => {
