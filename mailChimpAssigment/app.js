@@ -45,13 +45,16 @@ app.post("/", (req, res) => {
             response.on("data", (data) => {
                 var jsonResp = JSON.parse(data);
                 if(jsonResp["error_count"] === 0) {
-                    res.send("Ahuevito");
+                    console.log("Ahuevito");
+                    res.sendFile(__dirname +"/success.html");
                 }
                 else {
-                    res.send(`No chicos... \n ${jsonResp.errors[0]["error_code"]} \n ${jsonResp.errors[0]["error"]}`);
+                    console.log(`No chicos... \n ${jsonResp.errors[0]["error_code"]} \n ${jsonResp.errors[0]["error"]}`);
+                    res.sendFile(__dirname + "/failure.html")
                 }
             }).on("error", (e) => {
-                res.send(`Oh cielos. Error ${e}`);
+                console.log(`Oh cielos. Error ${e}`);
+                res.sendFile(__dirname + "/failure.html")
             });
         } 
         else {
