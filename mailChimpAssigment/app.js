@@ -10,9 +10,9 @@ app.use(express.urlencoded({ extended:true }));
 app.set('view engine', 'html');
 app.set('views', __dirname);
 
-let apiKey = 'dc1e36f67454d3287d6986203c8f1b03-us21';
-let list_id = 'b35045526f';
-let SERVER_PREFIX = 'us21'
+let apiKey = 'XXXXXXXXXXXXXXXXXXXXXXXX';
+let list_id = 'XXXXXXXXXX';
+let SERVER_PREFIX = 'XXXX'
 app.get("/", (req, res) => {
     res.sendFile(__dirname +"/signup.html")
 });
@@ -37,7 +37,7 @@ app.post("/", (req, res) => {
     const url = `https://${SERVER_PREFIX}.api.mailchimp.com/3.0/lists/${list_id}`;
     const options = {
         method: "POST",
-        auth: "0248791@up.edu.mx:" + apiKey
+        auth: "XXXXXXXXXX" + apiKey
     }
     var jsonData = JSON.stringify(data);
     var mailRequest = https.request(url, options, (response) => {
