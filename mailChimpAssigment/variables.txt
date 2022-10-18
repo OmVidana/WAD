@@ -1,0 +1,4 @@
+apiKey = "dc1e36f67454d3287d6986203c8f1b03-us21";
+list_id = "b35045526f";
+SERVER_PREFIX = "us21";
+auth: "0248791" + apiKey;
